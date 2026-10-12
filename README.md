@@ -6,8 +6,8 @@ Introduction to Database Systems, Fall 2026, Alexandria National University
 
 | Name | ID | Contribution |
 |------|----|--------------|
-| YOUR NAME | YOUR ID | e.g. database schema, back end, README |
-| PARTNER NAME (delete row if working alone) | PARTNER ID | e.g. front end, validation, testing |
+| Mahmoud Khaled | 2204184 | database schema, back end, README |
+| Ziad Mohamed | 2204169 |  front end, validation, testing |
 
 ## 2. Technology
 
@@ -65,8 +65,10 @@ Introduction to Database Systems, Fall 2026, Alexandria National University
 Put four images in the `screenshots/` folder and keep these names (or change the links):
 
 ![Register page with error messages](screenshots/01-register-errors.png)
-![Login page](screenshots/02-login.png)
-![To-do list with one done item](screenshots/03-todo-list.png)
+![Login page]<img width="2556" height="1188" alt="image" src="https://github.com/user-attachments/assets/03f17a40-0da3-4c09-a92a-18f198ef9e9d" />
+
+![To-do list with one done item]<img width="2556" height="1184" alt="image" src="https://github.com/user-attachments/assets/93eaee39-ac64-4658-92ee-3407ae490456" />
+
 ![Phone-sized window](screenshots/04-mobile.png)
 
 ## 6. Answers
