@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}To-Do{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">To-Do</a>
+    {% if session.get('name') %}
+    <div class="who">
+      <span>Hi, {{ session['name'] }}</span>
+      <form method="post" action="/logout"><button class="btn btn-ghost" type="submit">Log out</button></form>
+    </div>
+    {% endif %}
+  </header>
+  <main class="page">{% block content %}{% endblock %}</main>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

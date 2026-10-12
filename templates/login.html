@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<section class="card narrow">
+  <h1>Log in</h1>
+  {% if errors and errors.get('form') %}<p class="banner error">{{ errors['form'] }}</p>{% endif %}
+  <form id="auth-form" data-validate="login" method="post" action="/login" novalidate>
+    {% for f, label, type in [('email','Email','email'),('password','Password','password')] %}
+    <div class="field">
+      <label for="{{ f }}">{{ label }}</label>
+      <input id="{{ f }}" name="{{ f }}" type="{{ type }}"
+             {% if type != 'password' %}value="{{ values.get(f, '') if values else '' }}"{% endif %}
+             class="{{ 'invalid' if errors and errors.get(f) }}">
+      <p class="error" data-for="{{ f }}">{{ errors.get(f, '') if errors else '' }}</p>
+    </div>
+    {% endfor %}
+    <button class="btn" type="submit">Log in</button>
+  </form>
+  <p class="alt">New here? <a href="/register">Create an account</a></p>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/validate-auth.js') }}"></script>{% endblock %}
